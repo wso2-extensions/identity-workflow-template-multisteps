@@ -116,6 +116,7 @@
 
     <modules>
         <module>components/org.wso2.carbon.identity.workflow.template</module>
+        <module>features/org.wso2.carbon.identity.workflow.template.server.feature</module>
     </modules>
 
 </project>
