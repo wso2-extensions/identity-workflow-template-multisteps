@@ -48,6 +48,16 @@
                 <artifactId>org.wso2.carbon.identity.workflow.template</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity</groupId>
+                <artifactId>org.wso2.carbon.identity.workflow.mgt.bps.stub</artifactId>
+                <version>${workflow.impl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.wso2.carbon.identity</groupId>
+                <artifactId>org.wso2.carbon.identity.workflow.mgt</artifactId>
+                <version>${identity.framework.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -132,6 +142,7 @@
 
     <properties>
         <javax.activation.import.pkg.version>[0.0.0, 1.0.0)</javax.activation.import.pkg.version>
+        <workflow.impl.version>5.1.0</workflow.impl.version>
     </properties>
 
 </project>
