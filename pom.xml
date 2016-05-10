@@ -40,6 +40,16 @@
         <tag>HEAD</tag>
     </scm>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.wso2.carbon.identity</groupId>
+                <artifactId>org.wso2.carbon.identity.workflow.template</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <repositories>
         <repository>
             <id>wso2-nexus</id>
@@ -118,6 +128,10 @@
         <module>components/org.wso2.carbon.identity.workflow.template</module>
         <module>features/org.wso2.carbon.identity.workflow.template.server.feature</module>
     </modules>
+
+    <properties>
+        <javax.activation.import.pkg.version>[0.0.0, 1.0.0)</javax.activation.import.pkg.version>
+    </properties>
 
 </project>
 
