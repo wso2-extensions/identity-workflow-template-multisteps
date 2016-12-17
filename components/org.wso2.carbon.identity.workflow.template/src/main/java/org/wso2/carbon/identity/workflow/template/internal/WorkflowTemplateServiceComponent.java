@@ -22,11 +22,12 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.component.ComponentContext;
+import org.wso2.carbon.identity.core.util.IdentityIOStreamUtils;
 import org.wso2.carbon.identity.workflow.mgt.exception.WorkflowRuntimeException;
 import org.wso2.carbon.identity.workflow.mgt.template.AbstractTemplate;
 import org.wso2.carbon.identity.workflow.mgt.util.WorkflowManagementUtil;
-import org.wso2.carbon.identity.workflow.template.TemplateConstant;
 import org.wso2.carbon.identity.workflow.template.MultiStepApprovalTemplate;
+import org.wso2.carbon.identity.workflow.template.TemplateConstant;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,32 +47,34 @@ public class WorkflowTemplateServiceComponent {
             BundleContext bundleContext = context.getBundleContext();
 
             String templateParamMetaDataXML = readTemplateParamMetaDataXML(TemplateConstant.TEMPLATE_PARAMETER_METADATA_FILE_NAME);
-            bundleContext.registerService(AbstractTemplate.class, new MultiStepApprovalTemplate(templateParamMetaDataXML),null);
+            bundleContext.registerService(AbstractTemplate.class, new MultiStepApprovalTemplate(templateParamMetaDataXML), null);
 
-        }catch(Throwable e){
+        } catch (Throwable e) {
             log.error("Error occurred while activating WorkflowTemplateServiceComponent bundle, " + e.getMessage());
         }
     }
 
 
-    private String readTemplateParamMetaDataXML(String fileName) throws WorkflowRuntimeException{
-        String content = null ;
+    private String readTemplateParamMetaDataXML(String fileName) throws WorkflowRuntimeException {
+        String content = null;
+        InputStream resourceAsStream = null;
         try {
-            InputStream resourceAsStream = this.getClass().getClassLoader()
+            resourceAsStream = this.getClass().getClassLoader()
                     .getResourceAsStream(fileName);
             content = WorkflowManagementUtil.readFileFromResource(resourceAsStream);
         } catch (URISyntaxException e) {
-            String errorMsg = "Error occurred while reading file from class path, " + e.getMessage() ;
+            String errorMsg = "Error occurred while reading file from class path, " + e.getMessage();
             log.error(errorMsg);
-            throw new WorkflowRuntimeException(errorMsg,e);
+            throw new WorkflowRuntimeException(errorMsg, e);
         } catch (IOException e) {
-            String errorMsg = "Error occurred while reading file from class path, " + e.getMessage() ;
+            String errorMsg = "Error occurred while reading file from class path, " + e.getMessage();
             log.error(errorMsg);
-            throw new WorkflowRuntimeException(errorMsg,e);
+            throw new WorkflowRuntimeException(errorMsg, e);
+        } finally {
+            IdentityIOStreamUtils.closeInputStream(resourceAsStream);
         }
-        return content ;
+        return content;
     }
-
 
 
 }
