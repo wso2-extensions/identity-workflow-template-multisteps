@@ -50,7 +50,7 @@ public class WorkflowTemplateServiceComponent {
             bundleContext.registerService(AbstractTemplate.class, new MultiStepApprovalTemplate(templateParamMetaDataXML), null);
 
         } catch (Throwable e) {
-            log.error("Error occurred while activating WorkflowTemplateServiceComponent bundle, " + e.getMessage());
+            log.error("Error occurred while activating WorkflowTemplateServiceComponent bundle.", e);
         }
     }
 
