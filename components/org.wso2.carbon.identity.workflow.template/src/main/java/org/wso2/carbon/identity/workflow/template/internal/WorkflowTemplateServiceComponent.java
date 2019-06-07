@@ -15,7 +15,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 package org.wso2.carbon.identity.workflow.template.internal;
 
 import org.apache.commons.logging.Log;
@@ -28,39 +27,39 @@ import org.wso2.carbon.identity.workflow.mgt.template.AbstractTemplate;
 import org.wso2.carbon.identity.workflow.mgt.util.WorkflowManagementUtil;
 import org.wso2.carbon.identity.workflow.template.MultiStepApprovalTemplate;
 import org.wso2.carbon.identity.workflow.template.TemplateConstant;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
 
-/**
- * @scr.component name="org.wso2.carbon.identity.workflow.template" immediate="true"
- */
+@Component(
+         name = "org.wso2.carbon.identity.workflow.template", 
+         immediate = true)
 public class WorkflowTemplateServiceComponent {
 
     private static Log log = LogFactory.getLog(WorkflowTemplateServiceComponent.class);
 
-
+    @Activate
     protected void activate(ComponentContext context) {
-
         try {
             BundleContext bundleContext = context.getBundleContext();
-
             String templateParamMetaDataXML = readTemplateParamMetaDataXML(TemplateConstant.TEMPLATE_PARAMETER_METADATA_FILE_NAME);
             bundleContext.registerService(AbstractTemplate.class, new MultiStepApprovalTemplate(templateParamMetaDataXML), null);
-
         } catch (Throwable e) {
             log.error("Error occurred while activating WorkflowTemplateServiceComponent bundle.", e);
         }
     }
 
-
     private String readTemplateParamMetaDataXML(String fileName) throws WorkflowRuntimeException {
         String content = null;
         InputStream resourceAsStream = null;
         try {
-            resourceAsStream = this.getClass().getClassLoader()
-                    .getResourceAsStream(fileName);
+            resourceAsStream = this.getClass().getClassLoader().getResourceAsStream(fileName);
             content = WorkflowManagementUtil.readFileFromResource(resourceAsStream);
         } catch (URISyntaxException e) {
             String errorMsg = "Error occurred while reading file from class path, " + e.getMessage();
@@ -75,6 +74,5 @@ public class WorkflowTemplateServiceComponent {
         }
         return content;
     }
-
-
 }
+
