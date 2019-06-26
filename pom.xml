@@ -174,12 +174,12 @@
     <properties>
         <identity.workflow.template.multisteps.version>${project.version}</identity.workflow.template.multisteps.version>
 
-        <carbon.kernel.version>4.4.7</carbon.kernel.version>
-        <carbon.kernel.package.import.version.range>[4.4.0, 5.0.0)</carbon.kernel.package.import.version.range>
+        <carbon.kernel.version>4.5.0-m1</carbon.kernel.version>
+        <carbon.kernel.package.import.version.range>[4.5.0, 5.0.0)</carbon.kernel.package.import.version.range>
         <carbon.base.imp.pkg.version.range>[1.0.0, 2.0.0)</carbon.base.imp.pkg.version.range>
         <carbon.user.api.imp.pkg.version.range>[1.0.1, 2.0.0)</carbon.user.api.imp.pkg.version.range>
-        <axis2.osgi.version.range>[1.6.1.wso2v12, 2.0.0)</axis2.osgi.version.range>
-        <axiom.wso2.version>1.2.11.wso2v10</axiom.wso2.version>
+        <axis2.osgi.version.range>[1.6.1-wso2v37, 2.0.0)</axis2.osgi.version.range>
+        <axiom.wso2.version>1.2.11-wso2v16</axiom.wso2.version>
         <axiom.osgi.version.range>[1.2.11, 2.0.0)</axiom.osgi.version.range>
         <axiom.org.jaxen.imp.pkg.version.range>[1.1.1, 2.0.0)</axiom.org.jaxen.imp.pkg.version.range>
         <commons.io.wso2.osgi.version.range>[2.4.0,3.0.0)</commons.io.wso2.osgi.version.range>
@@ -191,13 +191,13 @@
         <osgi.framework.imp.pkg.version.range>[1.7.0, 2.0.0)</osgi.framework.imp.pkg.version.range>
         <javax.activation.import.pkg.version>[0.0.0, 1.0.0)</javax.activation.import.pkg.version>
 
-        <carbon.commons.version>4.5.2</carbon.commons.version>
-        <carbon.commons.imp.pkg.version>[4.4.0, 5.0.0)</carbon.commons.imp.pkg.version>
+        <carbon.commons.version>4.7.1</carbon.commons.version>
+        <carbon.commons.imp.pkg.version>[4.7.0, 5.0.0)</carbon.commons.imp.pkg.version>
 
-        <identity.framework.version>5.5.0</identity.framework.version>
-        <carbon.identity.package.import.version.range>[5.0.0, 6.0.0)</carbon.identity.package.import.version.range>
-        <identity.workflow.impl.bps.version>5.1.3</identity.workflow.impl.bps.version>
-        <carbon.identity.workflow.impl.bps.package.import.version.range>[5.0.0, 6.0.0)
+        <identity.framework.version>5.13.8</identity.framework.version>
+        <carbon.identity.package.import.version.range>[5.13.0, 6.0.0)</carbon.identity.package.import.version.range>
+        <identity.workflow.impl.bps.version>5.2.0</identity.workflow.impl.bps.version>
+        <carbon.identity.workflow.impl.bps.package.import.version.range>[5.2.0, 6.0.0)
         </carbon.identity.workflow.impl.bps.package.import.version.range>
 
         <maven.scr.plugin.version>1.7.2</maven.scr.plugin.version>
