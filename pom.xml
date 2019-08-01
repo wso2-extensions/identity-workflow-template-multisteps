@@ -21,7 +21,7 @@
     <parent>
         <groupId>org.wso2</groupId>
         <artifactId>wso2</artifactId>
-        <version>1</version>
+        <version>1.2</version>
     </parent>
 
     <groupId>org.wso2.carbon.identity.workflow.template.multisteps</groupId>
@@ -174,7 +174,7 @@
     <properties>
         <identity.workflow.template.multisteps.version>${project.version}</identity.workflow.template.multisteps.version>
 
-        <carbon.kernel.version>4.5.0-m1</carbon.kernel.version>
+        <carbon.kernel.version>4.5.0-m3</carbon.kernel.version>
         <carbon.kernel.package.import.version.range>[4.5.0, 5.0.0)</carbon.kernel.package.import.version.range>
         <carbon.base.imp.pkg.version.range>[1.0.0, 2.0.0)</carbon.base.imp.pkg.version.range>
         <carbon.user.api.imp.pkg.version.range>[1.0.1, 2.0.0)</carbon.user.api.imp.pkg.version.range>
@@ -194,7 +194,7 @@
         <carbon.commons.version>4.7.1</carbon.commons.version>
         <carbon.commons.imp.pkg.version>[4.7.0, 5.0.0)</carbon.commons.imp.pkg.version>
 
-        <identity.framework.version>5.13.8</identity.framework.version>
+        <identity.framework.version>5.13.42-SNAPSHOT</identity.framework.version>
         <carbon.identity.package.import.version.range>[5.13.0, 6.0.0)</carbon.identity.package.import.version.range>
         <identity.workflow.impl.bps.version>5.2.0</identity.workflow.impl.bps.version>
         <carbon.identity.workflow.impl.bps.package.import.version.range>[5.2.0, 6.0.0)
