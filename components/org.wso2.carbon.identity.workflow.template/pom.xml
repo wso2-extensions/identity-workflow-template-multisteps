@@ -21,7 +21,7 @@
         <artifactId>identity-workflow-template-multisteps</artifactId>
         <groupId>org.wso2.carbon.identity.workflow.template.multisteps</groupId>
         <relativePath>../../pom.xml</relativePath>
-        <version>5.4.3-SNAPSHOT</version>
+        <version>5.4.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>org.wso2.carbon.identity.workflow.template</artifactId>
