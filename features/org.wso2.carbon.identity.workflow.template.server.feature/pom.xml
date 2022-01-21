@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.wso2.carbon.identity.workflow.template.multisteps</groupId>
         <artifactId>identity-workflow-template-multisteps</artifactId>
-        <version>5.5.0</version>
+        <version>5.5.1-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
