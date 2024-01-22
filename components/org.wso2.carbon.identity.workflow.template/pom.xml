@@ -73,7 +73,7 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.wso2.carbon.identity.framework</groupId>
+            <groupId>org.wso2.carbon.identity.workflow.impl.bps</groupId>
             <artifactId>org.wso2.carbon.identity.workflow.mgt</artifactId>
         </dependency>
         <dependency>
@@ -139,7 +139,7 @@
                             org.wso2.carbon.core.util; version="${carbon.kernel.package.import.version.range}",
                             org.wso2.carbon.stratos.common.*; version="${carbon.commons.imp.pkg.version}",
                             org.wso2.carbon.identity.workflow.mgt.*;
-                            version="${carbon.identity.package.import.version.range}"
+                            version="${carbon.identity.workflow.impl.bps.package.import.version.range}"
                         </Import-Package>
                         <Export-Package>
                             !org.wso2.carbon.identity.workflow.template.internal,
