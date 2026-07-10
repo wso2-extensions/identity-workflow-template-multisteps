@@ -85,9 +85,9 @@
                 <version>${identity.workflow.impl.bps.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon.identity.workflow.impl.bps</groupId>
+                <groupId>org.wso2.carbon.identity.framework</groupId>
                 <artifactId>org.wso2.carbon.identity.workflow.mgt</artifactId>
-                <version>${identity.workflow.impl.bps.version}</version>
+                <version>${identity.framework.version}</version>
             </dependency>
             <!-- Pax Logging -->
             <dependency>
@@ -128,7 +128,7 @@
         <carbon.commons.version>4.7.11</carbon.commons.version>
         <carbon.commons.imp.pkg.version>[4.7.11, 5.0.0)</carbon.commons.imp.pkg.version>
 
-        <identity.framework.version>5.14.67</identity.framework.version>
+        <identity.framework.version>7.8.586</identity.framework.version>
         <carbon.identity.package.import.version.range>[5.14.67, 8.0.0)</carbon.identity.package.import.version.range>
         <identity.workflow.impl.bps.version>5.5.6</identity.workflow.impl.bps.version>
         <carbon.identity.workflow.impl.bps.package.import.version.range>[5.3.5, 8.0.0)
